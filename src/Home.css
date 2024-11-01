@@ -48,13 +48,48 @@
 }
 
 .features {
+  display: flex;
+  justify-content: center;
+  align-items: stretch; /* Ensures all cards align and stretch evenly */
   padding: 60px 0;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
 }
 
 .feature-card {
+  width: 250px; /* Fixed width for all cards */
+  height: 300px; /* Fixed height for uniformity */
+  display: flex;
+  flex-direction: column; /* Ensures content aligns vertically */
+  justify-content: center; /* Centers content vertically */
+  align-items: center; /* Centers content horizontally */
   text-align: center;
   padding: 20px;
+  margin: 10px;
+  transition: transform 0.3s ease;
+  background-color: white;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional: add a shadow for visual depth */
 }
+
+.feature-card:hover {
+  transform: scale(1.1); /* Scale effect on hover */
+  background-color: azure;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .feature-card {
+    width: 250px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .feature-card {
+    width: 100%; /* Full width on small screens */
+    height: auto; /* Let height adjust for smaller screens */
+  }
+}
+
 
 .about {
   background-color: #f5f5f5;

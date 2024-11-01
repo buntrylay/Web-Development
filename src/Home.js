@@ -18,12 +18,12 @@ const Home = () => {
             Predicting the Housing Market
           </Typography>
           <Typography variant="subtitle1" component="p" className="hero-subtitle">
-            Your trusted source for accurate housing market predictions and insights.
+            Accurate, data-driven insights to help you make smarter housing decisions.
           </Typography>
           <Link to="/Uploadapp" style={{ textDecoration: 'none' }}>
-          <Button variant="contained" color="secondary" size="large" className="cta-button">
-            Get Started
-          </Button>
+            <Button variant="contained" color="secondary" size="large" className="cta-button">
+              Get Started
+            </Button>
           </Link>
         </Container>
       </section>
@@ -38,12 +38,25 @@ const Home = () => {
             <Grid item xs={12} md={4}>
               <Card className="feature-card" variant="outlined">
                 <CardContent>
-                  <TrendingUpIcon color="primary" fontSize="large" />
+                  <AssessmentIcon color="primary" fontSize="large" />
                   <Typography variant="h5" component="h3" gutterBottom>
-                    Real-Time Predictions
+                    Comprehensive Analysis
                   </Typography>
                   <Typography variant="body2" color="textSecondary">
-                    Access up-to-date predictions on housing prices based on the latest data.
+                    Dive into historical trends and forecasts to guide your next property move.
+                  </Typography>
+                </CardContent>
+              </Card>
+            </Grid>
+            <Grid item xs={12} md={4}>
+              <Card className="feature-card" variant="outlined">
+                <CardContent>
+                  <TrendingUpIcon color="primary" fontSize="large" />
+                  <Typography variant="h5" component="h3" gutterBottom>
+                    Interactive Data Visualization
+                  </Typography>
+                  <Typography variant="body2" color="textSecondary">
+                    Explore the market visually with interactive charts and maps, helping you understand trends and performance at a glance.
                   </Typography>
                 </CardContent>
               </Card>
@@ -53,10 +66,10 @@ const Home = () => {
                 <CardContent>
                   <AssessmentIcon color="primary" fontSize="large" />
                   <Typography variant="h5" component="h3" gutterBottom>
-                    Comprehensive Analysis
+                    Predictive Analytics
                   </Typography>
                   <Typography variant="body2" color="textSecondary">
-                    Analyze historical trends and future forecasts to make informed decisions.
+                    Benefit from predictive analytics that anticipate market shifts, offering foresight into price changes and demand fluctuations.
                   </Typography>
                 </CardContent>
               </Card>
@@ -66,10 +79,36 @@ const Home = () => {
                 <CardContent>
                   <ReportIcon color="primary" fontSize="large" />
                   <Typography variant="h5" component="h3" gutterBottom>
-                    Customized Reports
+                    Regional Comparisons
                   </Typography>
                   <Typography variant="body2" color="textSecondary">
-                    Receive tailored reports based on your preferences and market interests.
+                    Easily compare regional trends, allowing you to assess opportunities and risks across multiple locations.
+                  </Typography>
+                </CardContent>
+              </Card>
+            </Grid>
+            <Grid item xs={12} md={4}>
+              <Card className="feature-card" variant="outlined">
+                <CardContent>
+                  <TrendingUpIcon color="primary" fontSize="large" />
+                  <Typography variant="h5" component="h3" gutterBottom>
+                    Market Risk Assessment
+                  </Typography>
+                  <Typography variant="body2" color="textSecondary">
+                    Gauge market risk factors to make more informed investment decisions, backed by detailed risk analysis.
+                  </Typography>
+                </CardContent>
+              </Card>
+            </Grid>
+            <Grid item xs={12} md={4}>
+              <Card className="feature-card" variant="outlined">
+                <CardContent>
+                  <ReportIcon color="primary" fontSize="large" />
+                  <Typography variant="h5" component="h3" gutterBottom>
+                    Regular Market Updates
+                  </Typography>
+                  <Typography variant="body2" color="textSecondary">
+                    Stay informed with periodic updates that keep you aware of the latest trends and market dynamics.
                   </Typography>
                 </CardContent>
               </Card>
@@ -85,8 +124,7 @@ const Home = () => {
             About Our Service
           </Typography>
           <Typography variant="body1" color="textSecondary">
-            We utilize advanced algorithms and machine learning models to provide insights into the housing market. 
-            Our goal is to help buyers, sellers, and investors make informed decisions based on reliable data.
+          Leveraging advanced algorithms and cutting-edge machine learning models, we analyze vast sets of historical and real-time data to bring transparency and clarity to housing market trends. By examining patterns in pricing, demand, and market performance, our platform offers precise insights that cater to all types of market participants—whether you're a first-time buyer, a seasoned investor, or a real estate professional.
           </Typography>
         </Container>
       </section>
@@ -95,15 +133,15 @@ const Home = () => {
       <section className="cta">
         <Container maxWidth="md" style={{ textAlign: 'center', padding: '40px 0' }}>
           <Typography variant="h4" component="h2" gutterBottom>
-            Any Comment?
+            Have Questions or Feedback?
           </Typography>
           <Typography variant="body1" color="textSecondary" gutterBottom>
-            Any questions
+            We're here to help! Reach out with any comments or inquiries.
           </Typography>
           <Link to="/ContactUs" style={{ textDecoration: 'none' }}>
-          <Button variant="contained" color="secondary" size="large" className="cta-button">
-            Feedback
-          </Button>
+            <Button variant="contained" color="secondary" size="large" className="cta-button">
+              Share Feedback
+            </Button>
           </Link>
         </Container>
       </section>
