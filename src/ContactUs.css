@@ -3,7 +3,7 @@
   width: 100%;
   max-width: 1600px; 
   margin: 0 auto;
-  padding: 40px 20px;
+  padding: 40px 10px;
   font-family: 'Arial', sans-serif;
   color: #333;
   background-color: #f4f4f4;
@@ -54,6 +54,7 @@
   font-size: 1.5rem;
   color: #333;
   margin-bottom: 10px;
+  text-align: center;
 }
 
 .member-card p {
@@ -143,4 +144,58 @@ button[type="submit"]:active {
   color: red;
   font-size: 0.9rem;
   margin-top: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-us h1 {
+    font-size: 2rem; /* Adjust heading size for tablets */
+  }
+
+  .contact-us p {
+    font-size: 1.1rem; /* Adjust paragraph size for tablets */
+  }
+
+  .member-card {
+    width: 80%; /* Slightly reduce width for tablets */
+  }
+
+  .feedback-form {
+    width: 80%;
+    padding: 20px; /* Adjust padding for feedback form */
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-us h1 {
+    font-size: 1.5rem; /* Smaller heading size for phones */
+  }
+
+  .contact-us p {
+    font-size: 1rem; /* Smaller paragraph size for phones */
+  }
+
+  .member-card {
+    width: 70%; /* Full width for cards on phones */
+    word-wrap: break-word;
+  }
+
+  .feedback-form {
+    width: 70%;
+    padding: 10px; /* Reduce padding for smaller screens */
+  }
+
+  .form-field label {
+    font-size: 0.9rem; /* Smaller label size for phones */
+  }
+
+  .form-field input,
+  .form-field textarea {
+    font-size: 0.9rem; /* Smaller input/textarea size for phones */
+  }
+
+  button[type="submit"] {
+    padding: 12px; /* Smaller button padding for phones */
+    font-size: 1rem; /* Smaller font size for button */
+  }
 }

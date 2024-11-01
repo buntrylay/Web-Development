@@ -3,29 +3,20 @@ body {
   background: linear-gradient(135deg, #f5f5dc, #f0f8ff); /* Beige to Azure */
   color: #333; /* Dark gray for text */
   font-family: 'Arial', sans-serif;
-  margin: 0;
-  padding: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
 }
 
-.App {
-  text-align: center;
-  width: 100%;
-  max-width: 1600px; /* Increase this for larger desktop width */
-  padding: 20px;
-  margin: 0 auto; /* Centers content */
-  box-sizing: border-box;
-}
-
+/* Heading styling */
 h1 {
-  font-size: 2.2rem;
+  font-size: 2.5rem; /* Increased font size for better visibility */
   color: #000;
-  margin-bottom: 20px;
+  margin-bottom: 20px;  
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
   word-wrap: break-word;
+  text-align: center; /* Center align for better aesthetics */
 }
 
 /* Slide container layout */
@@ -33,16 +24,16 @@ h1 {
   display: flex;
   align-items: flex-start;
   width: 100%;
-  max-width: 1600px; /* Increased max-width for desktop */
+  max-width: 1500px; /* Increased max-width for desktop */
   padding: 20px;
-  gap: 40px;
+  gap: 20px;
   position: relative;
 }
 
 /* Graph container styling */
 .graph-container {
   flex: 2;
-  max-width: 750px; /* Set a max-width for the graph container */
+  max-width: 600px; /* Set a max-width for the graph container */
   background: #1e1e2e;
   border-radius: 15px;
   padding: 20px;
@@ -52,17 +43,19 @@ h1 {
   align-items: center;
   justify-content: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-left: 35px;
 }
 
+/* Hover effects for graph container */
 .graph-container:hover {
-  transform: translateY(-10px) scale(1.1);
+  transform: translateY(-10px) scale(1.05); /* Slight scale for smoother effect */
   box-shadow: 0px 20px 35px rgba(0, 0, 0, 0.5);
 }
 
 /* Description box styling */
 .description-box {
   flex: 1;
-  max-width: 750px; /* Set a max-width for the description box */
+  max-width: 350px; /* Set a max-width for the description box */
   background: #1e1e2e;
   border-radius: 15px;
   padding: 20px;
@@ -75,30 +68,30 @@ h1 {
   justify-content: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   overflow-y: auto;
-  word-wrap: break-word;
 }
 
-
+/* Hover effects for description box */
 .description-box:hover {
-  transform: translateY(-10px) scale(1.1);
+  transform: translateY(-10px) scale(1.05); /* Slight scale for smoother effect */
   box-shadow: 0px 20px 35px rgba(0, 0, 0, 0.5);
 }
 
+/* Header styling within the description box */
 .description-box h2 {
-  font-size: 1.5rem;
+  font-size: 1.8rem; /* Increased header size for better visibility */
   color: #ffffff;
-  margin-top: 0;
-  margin-bottom: 10px;
+  margin: 0 0 10px; /* Simplified margin */
 }
 
+/* Paragraph styling within the description box */
 .description-box p {
   color: #ffffff;
   font-size: 1em;
   line-height: 1.5;
-  margin: 1;
-  padding: 0;
+  margin: 5px 0; /* Added vertical margin for spacing */
 }
 
+/* Bold text within paragraphs */
 .description-box p strong {
   color: #ffffff;
 }
@@ -143,14 +136,16 @@ h1 {
   z-index: 10;
 }
 
+/* Positioning buttons */
 .next-button {
-  right: -50px;
+  right: 220px;
 }
 
 .prev-button {
-  left: -50px;
+  left: 0px;
 }
 
+/* Hover effects for arrow buttons */
 .next-button:hover,
 .prev-button:hover {
   background: #c9f3ff;
@@ -166,11 +161,11 @@ h1 {
 }
 
 .progress-dot {
-  width: 8px;
-  height: 8px;
+  width: 10px; /* Slightly larger for better visibility */
+  height: 10px;
   background-color: #444;
   border-radius: 50%;
-  margin: 0 3px;
+  margin: 0 5px; /* Spaced out for clarity */
   transition: background-color 0.3s;
 }
 
@@ -181,7 +176,7 @@ h1 {
 /* Refresh button styling */
 .refresh-button {
   margin-top: 15px;
-  padding: 8px 16px;
+  padding: 10px 20px; /* Increased padding for better touch targets */
   background-color: #007bff;
   color: white;
   border: none;
@@ -223,7 +218,6 @@ h1 {
   }
 }
 
-/* Responsive design */
 @media (max-width: 768px) {
   .slide-container {
     flex-direction: column;
