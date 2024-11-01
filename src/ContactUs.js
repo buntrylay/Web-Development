@@ -50,8 +50,8 @@ const ContactUs = () => {
 
         <div className="member-card">
           <h2>Min Khant Aung</h2>
-          <p><strong>StudentID: </strong> Data Analyst</p>
-          <p><strong>Email:</strong> john.smith@example.com</p>
+          <p><strong>StudentID: </strong> 103833225</p>
+          <p><strong>Email:</strong> 103833225@student.swin.edu.au</p>
           <p>
   
           </p>
