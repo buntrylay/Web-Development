@@ -1,14 +1,17 @@
 /* General App Styling */
 /* Header.css */
 
+/* Apply box-sizing to all elements */
+/* Apply box-sizing to all elements */
+
+
 .App {
-  text-align: center;
+  text-align:left;
   font-family: 'Arial', sans-serif;
-  background-color: #f4f4f4; /* Light grey background */
-  width: 100vw; /* Full width of the viewport */
+  background-color:#ffffff; /* Light grey background */
+  width:100vw;
   height: 100vh; /* Full height of the viewport */
-  margin: 0; /* Remove any default margin */
-  overflow-x: hidden; /* Prevent horizontal scrolling if content overflows */
+  overflow-x:hidden; /* Prevent horizontal scrolling if content overflows */
 }
 
 .header {

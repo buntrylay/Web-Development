@@ -16,7 +16,7 @@ h1 {
   margin-bottom: 20px;  
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
   word-wrap: break-word;
-  text-align: center; /* Center align for better aesthetics */
+  text-align:left; /* Center align for better aesthetics */
 }
 
 /* Slide container layout */
@@ -24,15 +24,15 @@ h1 {
   display: flex;
   align-items: flex-start;
   width: 100%;
-  max-width: 1500px; /* Increased max-width for desktop */
+  max-width: 1200px; /* Increased max-width for desktop */
   padding: 20px;
-  gap: 20px;
+  gap: 40px;
   position: relative;
 }
 
 /* Graph container styling */
 .graph-container {
-  flex: 2;
+  flex: 1;
   max-width: 600px; /* Set a max-width for the graph container */
   background: #1e1e2e;
   border-radius: 15px;
@@ -43,7 +43,7 @@ h1 {
   align-items: center;
   justify-content: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  margin-left: 35px;
+  margin: 20px;
 }
 
 /* Hover effects for graph container */
@@ -55,7 +55,7 @@ h1 {
 /* Description box styling */
 .description-box {
   flex: 1;
-  max-width: 350px; /* Set a max-width for the description box */
+  max-width: 600px; /* Set a max-width for the description box */
   background: #1e1e2e;
   border-radius: 15px;
   padding: 20px;
@@ -68,6 +68,7 @@ h1 {
   justify-content: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   overflow-y: auto;
+  margin: 20px;
 }
 
 /* Hover effects for description box */
@@ -124,7 +125,7 @@ h1 {
   background: none;
   border: none;
   color: #000;
-  font-size: 2rem;
+  font-size: 1.5rem;
   cursor: pointer;
   padding: 12px;
   border-radius: 50%;
@@ -138,11 +139,11 @@ h1 {
 
 /* Positioning buttons */
 .next-button {
-  right: 220px;
+  right: -10px;
 }
 
 .prev-button {
-  left: 0px;
+  left: -10px;
 }
 
 /* Hover effects for arrow buttons */
@@ -154,6 +155,7 @@ h1 {
 
 /* Progress indicator styling */
 .progress-indicator {
+  margin-left: -690px;
   display: flex;
   justify-content: center;
   margin-top: 15px;
@@ -175,6 +177,7 @@ h1 {
 
 /* Refresh button styling */
 .refresh-button {
+  margin-left: 550px;
   margin-top: 15px;
   padding: 10px 20px; /* Increased padding for better touch targets */
   background-color: #007bff;
@@ -211,42 +214,147 @@ h1 {
 }
 
 /* Responsive Design */
-@media (max-width: 1200px) {
-  .slide-container {
-    flex-direction: column;
-    max-width: 100%;
-  }
-}
 
+/* iPad mini */
 @media (max-width: 768px) {
   .slide-container {
+    display: flex;
+    align-items:center;
     flex-direction: column;
-    align-items: center;
+    padding: 10px;
+    width: 100%; /* Ensures the container takes full width */
+    gap: 10px;
+    
   }
 
-  .next-button,
+  .graph-container, .description-box {
+    max-width: 60%;
+    width: 70%;
+    height: auto;
+    margin: 10px 0;
+    margin-right: 70px;
+  }
+
+  /* Ensure both arrows are visible */
+  .next-button {
+    right: 100px;
+  }
+
   .prev-button {
-    font-size: 1.5rem;
-    right: -20px;
-    left: -20px;
+    left: 30px;
+  }
+
+  /* Center progress indicator */
+  .progress-indicator {
+    margin-top: 10px;
+    justify-content: center;
+    margin-left: -80px;
+  }
+
+  .refresh-button {
+    margin-left: 260px;
   }
 }
 
-@media (max-width: 480px) {
+/* iPad Mini Landscape Mode */
+@media (min-width: 769px) and (max-width: 1024px) {
   .slide-container {
-    padding: 10px;
-    gap: 10px;
+    flex-direction: column;
+    align-items:center;
+    padding: 0 20px;
+    width: 100%;
+    max-width: 1024px;
+    gap: 20px;
   }
 
-  .description-box {
-    max-width: 90%;
-    font-size: 0.9em;
+  .graph-container, .description-box {
+    max-width: 45%;
+    margin: 40px;
+    height: auto;
+    margin-right:120px;
   }
 
-  .next-button,
+  /* Position arrows at the edges */
+  .next-button {
+    right: 180px; /* Shifted slightly out to make it prominent */
+  }
+
   .prev-button {
-    font-size: 1.2rem;
-    right: -10px;
-    left: -10px;
+    left: 80px;
+  }
+
+  .progress-indicator {
+    margin-top: 5px;
+    justify-content: center;
+    margin-left: -80px;
+  }
+
+  .refresh-button {
+    margin-left: 400px;
+    
+  }
+}
+
+/* iPhone 14 Pro Max (430px and below) */
+/* Main styling adjustments only for iPhone screens */
+
+
+/* iPhone 14 Pro Max Specific Adjustments (Portrait and Landscape) */
+@media (min-width: 430px) {
+  /* Graph and description boxes */
+  .slide-container {
+    display: flex;
+    align-items:center;
+    flex-direction: column;
+    padding: 10px;
+    width: 100%; /* Ensures the container takes full width */
+    gap: 10px;
+    margin: 20px;
+    
+  }
+  .graph-container, .description-box {
+    max-width: 70%; /* Smaller for iPhone */
+    width: 100%;
+    padding: 10px;
+    margin-right: 95px;
+  }
+
+  /* Reduce font sizes inside description box */
+  .description-box h2 {
+    font-size: 1.2rem; /* Smaller header */
+  }
+
+  .description-box p {
+    font-size: 0.8rem; /* Smaller paragraph text */
+  }
+
+  /* Adjust arrow button sizes and positioning */
+  .next-button, .prev-button {
+    font-size: 1.5rem; /* Smaller arrow size */
+    padding: 8px; /* Adjust padding for smaller screens */
+  }
+
+  /* Position arrows closer for narrow screens */
+  .next-button {
+    right: 70px;
+  }
+
+  .prev-button {
+    left: -25px;
+  }
+
+  .progress-indicator {
+    margin-top: 5px;
+    justify-content: center;
+    margin-left: -50px;
+  }
+  
+  /* Adjust refresh button for iPhone */
+  .refresh-button {
+    padding: 8px 14px; /* Smaller padding */
+    font-size: 0.85rem; /* Slightly smaller font size */
+    margin: 10px auto;
+    display: block;
+    margin-left: 140px;
   }
 }
