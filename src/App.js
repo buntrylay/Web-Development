@@ -58,7 +58,7 @@ const App = () => {
           <ListItemIcon>
             <AppsIcon />
           </ListItemIcon>
-          <ListItemText primary="App" />
+          <ListItemText primary="Insights" />
         </ListItem>
         <ListItem button component={Link} to="/ContactUs">
           <ListItemIcon>

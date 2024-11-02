@@ -9,6 +9,7 @@ const ContactUs = () => {
     comment: '',
   });
   const [errors, setErrors] = useState({});
+  const [successMessage, setSuccessMessage] = useState(""); // New state for success message
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -23,14 +24,32 @@ const ContactUs = () => {
     return formErrors;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const validationErrors = validateForm();
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);
     } else {
-      console.log('Form submitted:', formData);
-      // Here you would add code to send the form data to your backend or perform some action
+      try {
+        const response = await fetch("http://localhost:8000/feedback", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        });
+
+        if (response.ok) {
+          const data = await response.json();
+          setSuccessMessage(data.message); // Set success message
+          setFormData({ name: "", email: "", comment: "" }); // Clear the form
+          setErrors({});
+        } else {
+          console.error("Failed to submit feedback");
+        }
+      } catch (error) {
+        console.error("Error:", error);
+      }
     }
   };
 
@@ -64,6 +83,7 @@ const ContactUs = () => {
           <p>
           </p>
         </div>
+      
         <div className="feedback-form">
           <h1>Feedback</h1>
           <form onSubmit={handleSubmit}>
@@ -95,13 +115,15 @@ const ContactUs = () => {
                 name="comment"
                 value={formData.comment}
                 onChange={handleChange}
-                rows="5" // Set the number of rows for larger comment box
+                rows="5"
               />
               {errors.comment && <p className="error">{errors.comment}</p>}
             </div>
 
             <button type="submit">Submit</button>
           </form>
+
+          {successMessage && <p className="success">{successMessage}</p>} {/* Display success message */}
         </div>
       </div>
     </div>

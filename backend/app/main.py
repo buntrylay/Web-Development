@@ -1,11 +1,22 @@
 from fastapi.middleware.cors import CORSMiddleware 
 from fastapi import FastAPI, UploadFile, File, HTTPException
 import pandas as pd
+from pydantic import BaseModel
 from app.model import preprocess_random_forest, preprocess_dbscan, preprocess_holt_winters
 from app.model import predict_random_forest, predict_cluster, forecast_price
 from app.model import postprocess_random_forest, postprocess_dbscan, postprocess_holt_winters
 
 app = FastAPI()
+
+class FeedbackSchema(BaseModel):
+    name: str
+    email: str
+    comment: str
+
+@app.post("/feedback")
+async def create_feedback(feedback: FeedbackSchema):
+    # Instead of saving to a database, just return a success message
+    return {"message": "Your feedback has been successfully submitted. Thank you!"}
 
 # Add CORS middleware for frontend-backend interaction
 app.add_middleware(

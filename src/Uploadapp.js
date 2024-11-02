@@ -159,6 +159,7 @@ const DBSCANVisualization = React.memo(({ result }) => {
         font: { color: '#fff' },
         legend: { orientation: 'h', x: 0.5, xanchor: 'center', y: -0.2 },
       }}
+      useResizeHandler={true}
       style={{ width: '95%', height: '100%' }}
     />
   );
@@ -191,6 +192,7 @@ const HoltWintersVisualization = React.memo(({ result }) => {
         font: { color: '#fff' },
         legend: { orientation: 'h', x: 0.5, xanchor: 'center', y: -0.2 },
       }}
+      useResizeHandler={true}
       style={{ width: '100%', height: '100%' }}
     />
   );
