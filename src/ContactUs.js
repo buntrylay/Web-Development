@@ -55,9 +55,10 @@ const ContactUs = () => {
 
   return (
     <div className="contact-us">
+      <div >
       <h1>Contact Us</h1>
       <p>If you have any questions or need assistance, feel free to reach out to our team!</p>
-
+      </div>
       <div className="team-members">
         <div className="member-card">
           <h2>Buntry Lay</h2>
@@ -78,8 +79,8 @@ const ContactUs = () => {
 
         <div className="member-card">
           <h2>Channika Mao</h2>
-          <p><strong>StudentID: </strong></p>
-          <p><strong>Email:</strong> emily.johnson@example.com</p>
+          <p><strong>StudentID: </strong>103821194</p>
+          <p><strong>Email:</strong> 103821194@student.swin.edu.au</p>
           <p>
           </p>
         </div>
