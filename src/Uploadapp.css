@@ -155,9 +155,8 @@ h1 {
 
 /* Progress indicator styling */
 .progress-indicator {
-  margin-left: -690px;
+  margin-left: 580px;
   display: flex;
-  justify-content: center;
   margin-top: 15px;
   flex-wrap: wrap;
 }
@@ -172,6 +171,8 @@ h1 {
 }
 
 .progress-dot.active {
+  width: 13px;
+  height: 13px;
   background-color: #00c6ff;
 }
 
@@ -187,6 +188,7 @@ h1 {
   cursor: pointer;
   font-size: 1rem;
   transition: background-color 0.3s ease;
+  
 }
 
 .refresh-button:hover {
@@ -247,12 +249,12 @@ h1 {
   /* Center progress indicator */
   .progress-indicator {
     margin-top: 10px;
-    justify-content: center;
-    margin-left: -80px;
+    margin-left: 250px;
+    align-content: center;
   }
 
   .refresh-button {
-    margin-left: 260px;
+    margin-left: 220px;
   }
 }
 
@@ -290,8 +292,7 @@ h1 {
   }
 
   .refresh-button {
-    margin-left: 400px;
-    
+    margin-left: 300px auto;
   }
 }
 
@@ -355,6 +356,5 @@ h1 {
     font-size: 0.85rem; /* Slightly smaller font size */
     margin: 10px auto;
     display: block;
-    align-items: center;
   }
 }
